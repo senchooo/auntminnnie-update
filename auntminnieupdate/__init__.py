@@ -2,18 +2,20 @@ from bs4 import BeautifulSoup
 import requests
 
 
+def info():
+    print('how to use this package:')
+    print('package News for the recent news in auntminnie')
+    print('package conferences for the recent conferences radiology in auntminnie')
+    print('.test for testing the web')
+    print('.data for take a data from web')
+    print('.run for run .test and .data')
+    print('i.e use news: \n a = auntminnie.news(https://www.auntminnie.com/)')
+
+
 class Dashboard:
     def __init__(self, url):
         self.request = requests.get(url)
         print('This the package for retrive last news and conferences about radiology')
-
-    def info(self):
-        print('how to use this package:')
-        print('package News for the recent news in auntminnie')
-        print('package conferences for the recent conferences radiology in auntminnie')
-        print('.test for testing the web')
-        print('.data for take a data from web')
-        print('.run for run .test and .data')
 
     def test(self):
         try:
