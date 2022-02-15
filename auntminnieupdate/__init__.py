@@ -15,13 +15,13 @@ def info():
 class Dashboard:
     def __init__(self, url):
         self.request = requests.get(url)
+        self.soup = BeautifulSoup(self.request.text, 'html.parser')
         print('This the package for retrive last news and conferences about radiology')
 
     def test(self):
         try:
             if self.request.status_code == 200:
-                soup = BeautifulSoup(self.request.text, 'html.parser')
-                print(f"{soup.find('title').string} is accsesable")
+                print(f"{self.soup.find('title').string} is accsesable")
         except Exception:
             print("Can't accses web")
 
@@ -37,8 +37,7 @@ class News(Dashboard):
     def data(self):
         print('This is the recent news:')
 
-        soup = BeautifulSoup(self.request.text, 'html.parser')
-        news = soup.find_all('span', attrs={'class': 'Head'})
+        news = self.soup.find_all('span', attrs={'class': 'Head'})
         for i in news:
             print(i.get_text())
 
@@ -47,8 +46,7 @@ class Conferences(Dashboard):
     def data(self):
         print('This is the recent Radiology Conferences:')
 
-        soup = BeautifulSoup(self.request.text, 'html.parser')
-        con = soup.find('div', attrs={'class': 'supBoxLoopCtrl'})
+        con = self.soup.find('div', attrs={'class': 'supBoxLoopCtrl'})
         con = con.findChildren('a')
         for i in con:
             print(i.text)
