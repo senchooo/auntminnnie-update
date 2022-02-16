@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="auntminnieupdate",
-    version="0.3.5",
+    version="0.7",
     author="Sencho Parameswara",
     author_email="senchoparameswara@gmail.com",
     description="this package for retirve auntminnie recent news, webinars and radiology conference",
