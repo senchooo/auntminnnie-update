@@ -8,7 +8,7 @@ setuptools.setup(
     version="0.3.5",
     author="Sencho Parameswara",
     author_email="senchoparameswara@gmail.com",
-    description="this package for retirve auntminnie recent news and radiology conference",
+    description="this package for retirve auntminnie recent news, webinars and radiology conference",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/senchooo/auntminnnie-update",
