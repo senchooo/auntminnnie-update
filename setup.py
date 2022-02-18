@@ -5,10 +5,10 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="auntminnieupdate",
-    version="0.7",
+    version="1.1.0",
     author="Sencho Parameswara",
     author_email="senchoparameswara@gmail.com",
-    description="this package for retirve auntminnie recent news, webinars and radiology conference",
+    description="this package for scraping auntminnie recent news, webinars and radiology conference",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/senchooo/auntminnnie-update",
