@@ -80,14 +80,16 @@ class News(Core):
                 site = self.site + i.find('a')['href']
             except:
                 site = 'sorry, the link for this aericle is not yet available'
+            img = self.site + i.find('img', 'cntImgRightHeadline')['src']
 
-            print(f"{title}. Published on {date.replace(' -- ', '')}. link: {site} ")
+            print(f"{title}. Published on {date.replace(' -- ', '')}. link: {site}. image:{img} ")
 
             # sorting & create json file
             newsdict = {
                 'title': title,
                 'date': date.replace(' -- ', ''),
-                'site': site
+                'site': site,
+                'img': img
             }
             self.newslist.append(newsdict)
 
@@ -190,14 +192,16 @@ class Webinar(Core):
                 site = self.site + i.find('a')['href']
             except:
                 site = 'sorry, the link for this aericle is not yet available'
+            img = self.site + i.find('img', 'cntImgRightHeadline')['src']
 
-            print(f"{title}. held on {date.replace(' -- ', '')}. link: {site} ")
+            print(f"{title}. held on {date.replace(' -- ', '')}. link: {site}. img: {img} ")
 
             # sorting & create json file
             webdict = {
                 'title': title,
                 'date': date.replace(' -- ', ''),
-                'site': site
+                'site': site,
+                'img': img
             }
             self.weblist.append(webdict)
 
