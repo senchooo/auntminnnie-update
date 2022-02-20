@@ -19,3 +19,8 @@ Enter which page you want to access when defining .News or .Webinars.
 default is scraping page number one.
 
 i.e .News(2) for access page two in news.
+
+# other package that need to be instaled
+- BeautifulSoup4
+- requests
+- pandas
