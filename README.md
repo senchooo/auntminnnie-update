@@ -23,4 +23,4 @@ i.e .News(2) for access page two in news.
 # other package that need to be instaled
 - BeautifulSoup4
 - requests
-- pandas
+- pandas(openpyxl)
