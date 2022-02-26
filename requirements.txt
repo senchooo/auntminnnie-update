@@ -7,7 +7,7 @@ colorama==0.4.4
 docutils==0.18.1
 et-xmlfile==1.1.0
 idna==3.3
-importlib-metadata==4.11.0
+importlib-metadata==4.11.1
 keyring==23.5.0
 numpy==1.22.2
 openpyxl==3.0.9

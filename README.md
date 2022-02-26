@@ -3,22 +3,22 @@ this package for retirve auntminnie recent news, webinars and radiology conferen
 
 # how it work?
 his package will scarape in [auntminnnie](https://www.auntminnie.com/) to get latest news, webinars and radiology conference.
-this package use BeautifulSoup4 and requests.
 and then produce output of excel & csv file or JSON thats ready to use in your web or mobile apps.
+
+there are three features in this package:
+- News()
+- Conferences()
+- webinar()
+
+in some of these function there are serveral function:
 - .info() for info how to use
-- .test() for testing the web 
-- .data() for take all data from web 
-- .createjson() for show data & create file json 
-- .excelcsv() for show data & create file excel & csv 
-- .run() for run .test, .data, .createjson, and .excelcsv
-all exctract file in folder resultfile
+- .test() for testing connection the web
+- .singlepage() for scrap data with spesific page. result json, excel & csv file in resultfile. deafult is scrap page 1
+- .allpage() for scrap data as many pages availabel. result json, excel & csv file per page & all page in file resultfile
+- all in file resultfile with file name according to the features used
+- Conferences() only has .singlepage()
 
-the .data feature in .News and .Webinars can access certain pages as we want. 
-Enter which page you want to access when defining .News or .Webinars.
-
-default is scraping page number one.
-
-i.e .News(2) for access page two in news.
+i.e auntminnieupdate.News(2) for access page two in news.
 
 # other package that need to be instaled
 - BeautifulSoup4
